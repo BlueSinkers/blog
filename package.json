@@ -1,0 +1,26 @@
+{
+  "name": "blog-v1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "blog-v1",
+  "author": "Abhiram Kidambi",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@mdx-js/react": "^3.0.1",
+    "gatsby": "^5.13.5",
+    "gatsby-plugin-google-gtag": "^5.13.1",
+    "gatsby-plugin-mdx": "^5.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
