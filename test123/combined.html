@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Introduction</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="combined.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="d-block d-md-none alert alert-warning text-center mt-3">
+            This site isn't fully responsive. For the best experience, please view it on a larger screen.
+        </div>
+    </div>
+    <header id="top" class="section">
+        <nav>
+            <ul class="menu">
+                <li><a href="#home">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Contact</a></li>
+                <li><a href="#contact">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <div class="banner section" id="home">
+        <div class="container">
+            <div class = "edge-stuff">
+                <a href="#top" class = "edge-link mr-4"> Scroll up to go to Menu! </a> <a href="#projects" class = "edge-link ml-4"> Scroll down to go to Projects! </a>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <img src="profile_image3.jpg" alt="Your Photo" class="img-fluid img-profile">
+                    <div class="caption">Photo of me in front of some Cherry Blossoms!</div>
+                </div>
+                <div class="col-md-8 banner-text">
+                    <h1>Hi, I'm Abhiram Kidambi (Abhi)!</h1>
+                    <p>I'm a UMD sophomore pursuing CS and Applied Math with interests in:</p>
+                    <ul>
+                        <li>Computer Vision (particularly as it pertains to object detection and pose estimation)</li>
+                        <li>Robotics</li>
+                        <li>Software Engineering</li>
+                        <li>Cloud Computing</li>
+                    </ul>
+                    <p>Some hobbies of mine include:</p>
+                    <ul>
+                        <li>Playing/watching basketball (and other sports)</li>
+                        <li>Travelling</li>
+                        <li>Geography/Geopolitics</li>
+                        <li>Blogging and teaching others</li>
+                    </ul>
+                    <p>Please check out the Projects and Blog sections to learn more about me and my interests! Visit the Contact section to shoot me a message -- I'm happy to talk about anything!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class = "edge-stuff bg-custom">
+            <a href="#top" class = "edge-link mr-4"> Scroll up to Menu/Home! </a> <a href="#contact" class = "edge-link ml-4"> Scroll down to go to Contact! </a>
+        </div>
+        <div class="projects-banner bg-custom text-center pt-4 pb-1" id="projects">
+        <h1 style="font-size: 45pt">Projects</h1>
+        <div class="container">
+        <p style="font-size: 20px;">
+            Here are some projects of mine! Please note that these projects and more are explained in detail 
+                in my blog located <b>  HERE  </b>.
+        </p>
+        </div>
+    </div>
+    
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+            <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+            <li data-target="#carouselExampleControls" data-slide-to="3"></li>
+            <li data-target="#carouselExampleControls" data-slide-to="4"></li>
+            <li data-target="#carouselExampleControls" data-slide-to="5"></li>
+        </ol>
+       <div class="container-fluid" style="background-image: url('bg.jpg'); background-size: cover; background-position: center; height: 70vh;">
+        <div class="carousel-inner pt-4 pl-3 pr-3">
+          <div class="carousel-item active">
+            <div class="height-50vh container-fluid text-white text-center pb-5 pt-3" style="background-color: rgba(0, 0, 0, 0.7)">
+                <h1 class="pb-1 pt-2" style="font-size: 2rem;">Mathematics of Computer Vision</h1>
+                <div class="container px-5">
+                    <p class="lead"> <b> This project is an educational resource made for learning more about Computer Vision consisting of 60+ pages of TexEd up notes and various Python Demos (Documented Jupyter
+                        Notebooks). These notes
+                        were also presented in a slideshow format at various robotics events and conferences (including the Battle O Baltimore conference) and were a result of compilation of various 
+                        resources (referenced throughout). Some relevant topics covered include the PnP Model, object detection, facial recognition,
+                    digital signals processing, image compression, and deep learning (CNNs, famous architectures, and basic math). </b>
+                    </p>
+                    <p>
+                        <div class="container text-center ">
+                        <button class="btn btn-secondary mr-4 mt-2"> <i class="fab fa-github" style="font-size: 0.9em;"></i> GITHUB REPO </button>
+                        <button class="btn btn-secondary mt-2">  📝 BLOG</button>
+                        </div>
+                    </p>
+                </div>          
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="height-50vh container-fluid text-white text-center pb-5 pt-3" style="background-color: rgba(0, 0, 0, 0.7)">
+                <h1 class="pb-1 pt-2" style="font-size: 2rem;">Human Security Detector</h1>
+                <div class="container px-5">
+                    <p class="lead"> <b> Human Security Detector uses your webcam to monitor for unauthorized access of your computer. 
+                        When a person is detected, it prompts for a password and, if not entered, triggers an alarm, takes a photo, and can initiate other configurable actions like shutting down the computer. 
+                        It uses a trained-version of the YOLO Object Detection System to detect humans, and TKinter for the window-screen (which is immovable/uncloseable until password-entry). The code is thoroughly documented 
+                        and discusses YOLO's architecture issues such as installing it through DarkNET etc.</b>
+                    </p>
+                    <p>
+                        <div class="container text-center ">
+                        <button class="btn btn-secondary mr-4 mt-2"> <i class="fab fa-github" style="font-size: 0.9em;"></i> GITHUB REPO </button>
+                        <button class="btn btn-secondary mt-2">  📝 BLOG</button>
+                        </div>
+                    </p>
+                </div>          
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="height-50vh container-fluid text-white text-center pb-5 pt-3" style="background-color: rgba(0, 0, 0, 0.7)">
+                <h1 class="pb-1 pt-2" style="font-size: 2rem;">This Site and MY BLOG!</h1>
+                <div class="container px-5">
+                    <p class="lead"> <b> This site is a project of mine using HTML, JavaScript, and CSS along with Gatsby, React, and 
+                        Bootstrap. A version of the blog component of this site using the MERN (MongoDB, Express.js, React, and Node.js) stack can be found on my Github. 
+                        I've also helped make a couple of other websites including <a href="https://www.charettediv.org/"> this one </a> for the Charette Division. 
+                        Currently, this site isn't responsive (phone-use friendly) and when I find time, I will adjust some of the Bootstrap/CSS configurations to make that the case. Although 
+                        I'm not very artistic, I tried to incorporate a lot of personal elements in the site. Read more about this on my blog.</b>
+                    </p>
+                    <p>
+                        <div class="container text-center ">
+                        <button class="btn btn-secondary mr-4 mt-2"> <i class="fab fa-github" style="font-size: 0.9em;"></i> GITHUB REPO </button>
+                        <button class="btn btn-secondary mt-2">  📝 BLOG</button>
+                        </div>
+                    </p>
+                </div>          
+            </div>
+        </div>
+
+        <div class="carousel-item">
+        <div class="height-50vh container-fluid text-white text-center pb-5 pt-3" style="background-color: rgba(0, 0, 0, 0.7)">
+            <h1 class="pb-1 pt-2" style="font-size: 2rem;">Sparsity</h1>
+            <div class="container px-5">
+                <p class="lead"> <b> This project contains implementations of Compressed Sparse Row Matrix representation (CSR), various matrix methods (multiplication, QR/LU/Cholesky Decomposition, etc),
+                    a Collaborative-Filtering scheme using my implementation of CSR (a famous recommending scheme), and Conjugate Gradient Descent, a 
+                    deterministic approach to solving sparse Differential Equations. It's implemented in C and has comparable run-times to similar functionalities
+                    of <i>scipy.sparse</i>, Python's standard module for sparse matrices. It is inspired by Dr. Bahar Asgari's PhD Thesis. </b>
+                </p>
+                <p>
+                    <div class="container text-center ">
+                    <button class="btn btn-secondary mr-4 mt-2"> <i class="fab fa-github" style="font-size: 0.9em;"></i> GITHUB REPO </button>
+                    <button class="btn btn-secondary mt-2">  📝 BLOG</button>
+                    </div>
+                </p>
+            </div>          
+        </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="height-50vh container-fluid text-white text-center pb-5 pt-3" style="background-color: rgba(0, 0, 0, 0.7)">
+                <h1 class="pb-1 pt-2" style="font-size: 2rem;">SCROLL RIGHT 🙂</h1>
+                <div class="container px-5">
+                    <p class="lead"> <b> Note that I'm strictly including COMPLETE PERSONAL projects in this section. To find more about 
+                        projects and work I've done for internships, either check out my LinkedIn, shoot me a message. I have many other smaller projects
+                        which you can find in detail on my blog! <b>If you're interested in the background, scroll to the right! It is a picture of me dunking a (deflated) basketball 
+                        on a basketball-rim in my neighborhood.</b> You can also find information regarding my basketball interests in my blog too!
+                    </b>
+                    </p>
+                </div>          
+            </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="height-50vh container-fluid text-white text-center pb-5 pt-3" style="background-color: rgba(0, 0, 0, 0)">
+                      
+        </div>
+</div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="font-size: 2rem;">
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="width: 3rem; height: 3rem;"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="font-size: 2rem;">
+            <span class="carousel-control-next-icon" aria-hidden="true" style="width: 3rem; height: 3rem;"></span>
+            <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        let lastScrollTop = 0; // Keep track of last scroll position
+        let scrollUpCount = 0; // Count consecutive scroll ups
+        
+        /*window.addEventListener('scroll', function() {
+            let currentPageUrl = window.location.hash;
+            let currentScrollTop =  document.documentElement.scrollTop;
+
+            // Check if user is scrolling up
+            if (currentScrollTop < lastScrollTop) {
+                scrollUpCount++;
+            } else {
+                scrollUpCount = 0; // Reset count if scrolling down
+            }
+            // Redirect if scrolled up twice
+            if (scrollUpCount >= 2) {
+                alert("scroll detected");
+                if (currentPageUrl == "#home") {
+                    window.location.href='#top';
+                } else if (currentPageUrl == "#projects") {
+                    window.location.href='#home';
+                } else if (currentPageUrl != "#top") {
+                    alert("paki wtf");
+                }
+            }
+
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+        });*/
+
+        // Ensure no auto-scroll on page load
+        window.addEventListener('load', () => {
+            if (window.location.hash) {
+                window.scrollTo(0, 0);
+                setTimeout(() => {
+                    window.location.hash = '';
+                }, 1);
+            }
+        });
+    </script>
+</body>
+</html>
