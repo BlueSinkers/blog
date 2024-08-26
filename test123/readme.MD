@@ -1,1 +1,0 @@
-This folder is strictly for testing things out from the internet. I have decided to keep it as an open part of my project which you guys can see too to see where things are from and how they call came together.

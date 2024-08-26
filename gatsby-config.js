@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `Blog V1`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
     "gatsby-plugin-image",
@@ -14,6 +14,12 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/blog/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // Configure any specific options if needed
       },
     },
     "gatsby-plugin-mdx",

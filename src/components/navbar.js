@@ -1,34 +1,36 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import * as styles from './layout.modules.css'; // Import custom CSS module
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarToggler, Collapse } from 'reactstrap';
+import './layout.modules.css'; // Import global CSS file
 
-const Navbar = () => {
+const NavbarComp = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
-    <nav className={`navbar navbar-expand-lg navbar-light ${styles.navbar}`}>
-      <a className={`navbar-brand ${styles.navbarBrand}`} href="#">Abhi's Blog</a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
-        <ul className="navbar-nav mx-auto">
-          <li className="nav-item">
-            <Link className={`nav-link active ${styles.navLink}`} to="/">Home</Link>
-          </li>
-          <li className="nav-item">
-            <Link className={`nav-link ${styles.navLink}`} to="/search">Search</Link>
-          </li>
-          <li className="nav-item">
-            <Link className={`nav-link ${styles.navLink}`} to="/about">About</Link>
-          </li>
-          <li className="nav-item">
-            <Link className={`nav-link ${styles.navLink}`} to="/projects">Projects</Link>
-          </li>
-          <li className="nav-item">
-            <Link className={`nav-link ${styles.navLink}`} to="/contact">Contact</Link>
-          </li>
-        </ul>
-        <div className={styles.socialIcons}>
+    <Navbar className="navbar-custom" color="light" light expand="lg">
+      <NavbarBrand className="navbar-brand-custom" href="#">Abhi's Blog</NavbarBrand>
+      <NavbarToggler onClick={toggle} />
+      <Collapse isOpen={isOpen} navbar>
+        <Nav className="mx-auto" navbar>
+          <NavItem>
+            <NavLink tag={Link} className="nav-link-custom" to="/">Home</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} className="nav-link-custom" to="/search">Search</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} className="nav-link-custom" to="/about">Thoughts</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} className="nav-link-custom" to="/projects">Projects</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} className="nav-link-custom" to="/contact">Contact</NavLink>
+          </NavItem>
+        </Nav>
+        <div className="social-icons">
           <a href="https://www.linkedin.com/in/abhiramkidambi/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin" style={{ fontSize: '25px' }}></i>
           </a>
@@ -48,9 +50,9 @@ const Navbar = () => {
             <i className="fab fa-tiktok" style={{ fontSize: '25px' }}></i>
           </a>
         </div>
-      </div>
-    </nav>
+      </Collapse>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavbarComp;
