@@ -13,12 +13,23 @@
 }
 
 .bg-image {
-    background-image: url('https://www.cendyn.com/wp-content/uploads/2018/09/AdobeStock_116106668.jpeg');
+    background-image: url('https://www.cendyn.com/wp-content/uploads/2018/09/AdobeStock_116106668.jpeg') !important;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
+    height: 90vh;
     position: relative;
+}
+
+@media (max-width: 764px) {
+    .bg-image {
+        background-image: url('https://www.cendyn.com/wp-content/uploads/2018/09/AdobeStock_116106668.jpeg') !important;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+        position: relative;
+    }
 }
 
 .divider {
@@ -28,6 +39,10 @@
     margin: 20px 0;
   }
 
+  #tags {
+    scroll-margin-top: 10vh; /* Offset the scroll position by 10% of the viewport height */
+  }
+  
 .mask {
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
@@ -53,7 +68,7 @@
 
 .split-layout {
     display: flex;
-    min-height: 100vh;
+    min-height: 90vh;
     margin: 0;
     padding: 0;
 }
@@ -72,13 +87,13 @@
 }
 
 .image-section {
-    background-image: url('https://th.bing.com/th/id/OIP.8LnyWrrB1mPqBJeAcL0DDwHaFj?rs=1&pid=ImgDetMain') !important;
+    flex: 0 0 40%; /* Occupies 40% of the screen width */
+    background-image: url('../images/realshit.jpg'); /* Image URL */
     background-size: cover;
     background-position: center;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-}
+    background-repeat: no-repeat;
+    height: 90vh; /* Adjust height as needed */
+  }
 /* .image-section {
     background-image: url('https://th.bing.com/th/id/OIP.8LnyWrrB1mPqBJeAcL0DDwHaFj?rs=1&pid=ImgDetMain');
     background-size: contain; /* Adjust to fit the entire image 

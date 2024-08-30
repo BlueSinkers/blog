@@ -1,28 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 .navbar {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 1rem 2rem;
+    background-color: rgb(77, 10, 202);
+    padding: 4px 2rem;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
-    font-family: "Atomic Age", sans-serif;
-    font-weight: bold;
-    color: #000; 
+  font-family: "Satisfy", cursive;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 15pt;
+  color: #000; 
 }   
-
+.navbar-custom {
+    border-bottom: 1px solid #333;
+    min-height: 10vh;
+}
 .navbar-nav .nav-link {
     color: #000;
     margin-right: 1rem;
     font-family: "Atomic Age", sans-serif;
-    font-size: 10pt;
+    font-size: 13pt;
     padding-top: 0; /* Custom top padding */
     padding-bottom: 0; 
 }
 
 .navbar-nav .nav-link:hover {
+    color: #ff69b4; /* Light pink color on hover */
+}
+
+.navbar-nav .nav-link.active {
+    color: #ff69b4; /* Light pink color for active link */
+}
+
+.social-icons a {
+    color: #000;
+    margin-left: 0.75rem;
+    font-weight: normal !important;
+}
+
+.no-bold {
+  font-weight: normal !important;
+}
+
+.social-icons a:hover {
     color: #ff69b4; /* Light pink color on hover */
 }
 

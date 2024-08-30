@@ -9,25 +9,25 @@ const NavbarComp = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar className="navbar-custom" color="light" light expand="lg">
+    <Navbar className="navbar-custom sticky-top" color="light" light expand="lg" >
       <NavbarBrand className="navbar-brand-custom" href="#">Abhi's Blog</NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="mx-auto" navbar>
           <NavItem>
-            <NavLink tag={Link} className="nav-link-custom" to="/">Home</NavLink>
+            <NavLink tag={Link} className="nav-link-custom" to="/">← Main Site</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} className="nav-link-custom" to="/search">Search</NavLink>
+            <NavLink tag={Link} className="nav-link-custom" to="/#home">Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} className="nav-link-custom" to="/about">Thoughts</NavLink>
+            <NavLink tag={Link} className="nav-link-custom" to="/#tags">Tags</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} className="nav-link-custom" to="/projects">Projects</NavLink>
+            <NavLink tag={Link} className="nav-link-custom" to="/#blogcards-main">Catalog</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} className="nav-link-custom" to="/contact">Contact</NavLink>
+            <NavLink tag={Link} className="nav-link-custom" to="/">Search</NavLink>
           </NavItem>
         </Nav>
         <div className="social-icons">

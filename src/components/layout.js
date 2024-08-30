@@ -1,6 +1,7 @@
 import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import NavbarComp from './navbar' // Make sure the path to Navbar is correct
+import { useStaticQuery, graphql } from 'gatsby'
+import NavbarComp from './navbar' // Ensure the path to Navbar is correct
+import Footer from './footer' // Ensure the path to Footer is correct
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -14,13 +15,14 @@ const Layout = ({ pageTitle, children }) => {
   `)
   
   return (
-    <div>
+    <div className="d-flex flex-column min-vh-100">
       <NavbarComp />
-      <main>
+      <main className="flex-grow-1">
         {children}
       </main>
+      <Footer />
     </div>
   )
-};
+}
 
-export default Layout;
+export default Layout

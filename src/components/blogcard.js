@@ -1,5 +1,6 @@
-// ArticleCard.js
+// BlogCard.js
 import React from 'react';
+import { Link } from 'gatsby'; // Import Link from Gatsby
 import './blogcard.css'; // Import the specific CSS for this component
 
 function timeAgo(inputDate) {
@@ -34,26 +35,29 @@ function timeAgo(inputDate) {
     }
 }
 
-
-const BlogCard = ({ imgSrc, tag, title, description, userImg, userName, date }) => {
+const BlogCard = ({ imgSrc, tag, title, description, userImg, userName, date, slug }) => {
     return (
-        <div className="card">
-            <div className="card-header">
-                <img src={imgSrc} alt="article" className="card-image" />
-            </div>
-            <div className="card-body">
-                <span className={`tag tag-${tag}`}>{tag}</span>
-                <h4>{title}</h4>
-                <p>{description}</p>
-                <div className="user">
-                    <img src={userImg} alt="user" />
-                    <div className="user-info">
-                        <h5>{userName}</h5>
-                        <small>{timeAgo(date)}</small>
+            <div className="card">
+                
+        <Link to={`/blog/${slug}`} className="blog-card-link"> {/* Use Link for navigation */}
+                <div className="card-header">
+                    <img src={imgSrc} alt="article" className="card-image" />
+                </div>
+                <div className="card-body">
+                    <span className={`tag tag-${tag}`}>{tag}</span>
+                    <h4>{title}</h4>
+                    <p>{description}</p>
+                    <div className="user">
+                        <img src={userImg} alt="user" />
+                        <div className="user-info">
+                            <h5>{userName}</h5>
+                            <small>{timeAgo(date)}</small>
+                        </div>
                     </div>
                 </div>
+                </Link>
             </div>
-        </div>
+        
     );
 };
 

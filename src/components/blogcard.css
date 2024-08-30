@@ -41,6 +41,7 @@
     padding: 15px; /* Reduced padding */
     min-height: 180px; /* Reduced height */
     position: relative;
+    color: #000; /* Default text color black */
 }
 
 /* Tags within the card */
@@ -49,7 +50,7 @@
     border-radius: 50px;
     font-size: 10px; /* Smaller font size */
     margin: 0;
-    color: #fff;
+    color: #000; /* Text color black */
     padding: 2px 8px; /* Reduced padding */
     text-transform: uppercase;
     cursor: pointer;
@@ -88,6 +89,7 @@
 .user-info h5 {
     margin: 0;
     font-size: 14px !important; /* Reduced font size */
+    color: #000; /* Ensure text color is black */
 }
 
 .user-info small {
@@ -95,18 +97,19 @@
     font-size: 12px; /* Smaller font size */
 }
 
-
 /* Reduce the margin under the card header */
 .card-body h5 {
     margin-bottom: 0px; /* Reduced margin (1/3 of original space) */
     font-size: 18px; /* Optional adjustment for heading size */
+    color: #000; /* Ensure text color is black */
 }
 
 /* Reduce the font size of the descriptions */
 .card-body p {
     font-size: 95%;
-    margin-bottom: 5px; /* Optional adjustment for space below text */
+    margin-bottom: 8px; /* Optional adjustment for space below text */
     margin-top: 0px;
+    color: #000; /* Ensure text color is black */
 }
 
 /* Card hover effect */
@@ -120,6 +123,27 @@
     filter: brightness(1.3);
 }
 
+/* Ensure text color remains black on hover */
 .card:hover p {
-    color: #3e2c2c;
+    color: #000;
+}
+
+/* Ensure the link does not affect child styles */
+.blog-card-link {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent element */
+    display: block; /* Make the link a block-level element */
+}
+
+/* Ensure no styling changes on hover */
+.blog-card-link:hover,
+.blog-card-link:focus {
+    text-decoration: none; /* Ensure no underline on hover */
+    color: inherit; /* Ensure color remains the same on hover */
+    font-weight: normal; /* Ensure text is not bold on hover */
+}
+
+/* Optional: Ensure no outline or other styles applied by browsers */
+.blog-card-link:focus {
+    outline: none; /* Remove default focus outline */
 }

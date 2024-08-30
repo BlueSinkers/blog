@@ -2,22 +2,45 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import ProjectBanner from '../components/projectsbanner'
+import BlogCard from '../components/blogcard'
+import TechBanner from '../components/techbanner'
+import ThoughtsBanner from '../components/thoughtsbanner'
+import profileImage from '../images/profile.jpg' // Correct relative path
+import './blogstyles.css'
 
-const TagTemplate = ({ data }) => {
+const TagTemplate = ({ data, pageContext }) => {
   const posts = data.allMdx.nodes
-  const tag = data.allMdx.nodes[0]?.frontmatter.tags[0] || 'No tag'
+  const { tag } = pageContext // Get the tag from the page context
 
   return (
-    <Layout pageTitle="Tag Posts">
-      <Seo title={`Posts tagged with ${tag}`} />
-      <h1>Posts tagged with {tag}</h1>
-      <ul>
-        {posts.map(post => (
-          <li key={post.id}>
-          <a href={`../../blog/${post.frontmatter.slug}`}>{post.frontmatter.title}</a>
-          </li>
-        ))}
-      </ul>
+    <Layout pageTitle={`"${tag} Blogposts"`}>
+
+      {/* Conditionally render banners based on the tag */}
+      {tag === 'project' && <ProjectBanner />}
+      {tag === 'tech' && <TechBanner />}
+      {tag === 'thoughts' && <ThoughtsBanner />}
+
+      {posts.length === 0 ? (
+        <p>No posts found for this tag.</p>
+      ) : (
+        <div className="container">
+          {posts.map(post => (
+              <BlogCard
+              className="card"
+              key={post.id}
+              title={post.frontmatter.title}
+              imgSrc={post.frontmatter.image}
+              userImg={profileImage} // Add user image if available
+              description={post.frontmatter.syn}
+              userName="Abhiram Kidambi"
+              date={post.frontmatter.dateMade}
+              tags={post.frontmatter.tags} // Pass all tags or just the matched tag
+              slug = {post.frontmatter.slug}
+            />
+          ))}
+        </div>
+      )}
     </Layout>
   )
 }
@@ -33,6 +56,9 @@ export const query = graphql`
           title
           tags
           slug
+          dateMade
+          image
+          syn
         }
       }
     }

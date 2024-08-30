@@ -1,0 +1,69 @@
+/* Container for the blog cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1200px; /* Adjusted width for better fit */
+    padding-top: 20px; /* Added padding-top for spacing */
+}
+
+/* Top row: no changes, keep the current layout */
+/* Following rows: 3 cards per row */
+.container > .card:nth-child(n+3) {
+    width: calc(33.33% - 20px); /* Three cards per row for all subsequent rows */
+}
+
+/* Media query for medium screens: 2 cards per row with reduced side margins */
+@media (max-width: 900px) {
+    .container {
+        width: 100% !important; /* Ensure the container takes full width */
+        padding: 0 10px !important; /* Add padding on the sides for spacing from the edges */
+    }
+    
+    .container > .card {
+        width: calc(50% - 10px) !important; /* Two cards per row with reduced side margins */
+        margin: 10px 0; /* Add vertical margin for spacing between rows */
+    }
+}
+
+/* Media query for smallest screens: Stack cards vertically */
+@media (max-width: 600px) {
+    .container {
+        display: block; /* Change display to block to stack cards vertically */
+        width: 100%; /* Ensure the container takes full width */
+        padding: 10px; /* Add padding around the container */
+    }
+    
+    .container > .card {
+        width: 100% !important; /* Each card takes the full width of the container */
+        margin: 10px 0; /* Add vertical margin for spacing between cards */
+    }
+}
+
+
+/* Remove default link styles */
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit;        /* Inherit text color from parent */
+    background: none;      /* Remove background */
+    border: none;          /* Remove borders */
+    padding: 0;            /* Remove padding */
+    margin: 0;             /* Remove margin */
+    display: inline;       /* Reset display to inline if needed */
+    box-shadow: none;      /* Remove any box shadow */
+  }
+  
+  /* Optional: Reset all link states */
+  a:visited {
+    color: inherit;        /* Ensure visited links have the same color */
+  }
+  
+  a:hover,
+  a:focus,
+  a:active {
+    color: inherit;        /* Ensure hover, focus, and active states do not change color */
+    text-decoration: none; /* Ensure no underline on hover, focus, or active states */
+    background: none;      /* Remove background changes on hover, focus, or active states */
+    border: none;          /* Remove border changes on hover, focus, or active states */
+    box-shadow: none;      /* Remove any box shadow on hover, focus, or active states */
+  }
