@@ -40,30 +40,3 @@
     }
 }
 
-
-/* Remove default link styles */
-a {
-    text-decoration: none; /* Remove underline */
-    color: inherit;        /* Inherit text color from parent */
-    background: none;      /* Remove background */
-    border: none;          /* Remove borders */
-    padding: 0;            /* Remove padding */
-    margin: 0;             /* Remove margin */
-    display: inline;       /* Reset display to inline if needed */
-    box-shadow: none;      /* Remove any box shadow */
-  }
-  
-  /* Optional: Reset all link states */
-  a:visited {
-    color: inherit;        /* Ensure visited links have the same color */
-  }
-  
-  a:hover,
-  a:focus,
-  a:active {
-    color: inherit;        /* Ensure hover, focus, and active states do not change color */
-    text-decoration: none; /* Ensure no underline on hover, focus, or active states */
-    background: none;      /* Remove background changes on hover, focus, or active states */
-    border: none;          /* Remove border changes on hover, focus, or active states */
-    box-shadow: none;      /* Remove any box shadow on hover, focus, or active states */
-  }

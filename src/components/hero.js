@@ -24,13 +24,15 @@ const HeroSection = () => {
           {/* Text Section */}
           <Col md={8} className="text-section d-flex flex-column justify-content-center" >
             <h1 className="display-5 fw-bold anton">Blog Tags</h1>
-            <p className="lead">Click the buttons to ONLY see blogposts with certain tags! Check the photo of me dunking to the right! Scroll down to see catalog!</p>
-            <ul className="list-unstyled">
+            <p className="lead">Click buttons to see tags for blogposts! Scroll to see entire catalog!</p>
+            <p>
+              <ul className="list-unstyled">
               <li><b>PROJECTS</b>: blogposts regarding personal and professional projects</li>
               <li><b>TECH</b>: blogposts regarding anything pertaining to CS or Math including projects</li>
               <li><b>PERSONAL</b>: blogposts regarding personal thoughts about a variety of subjects</li>
               <li><b>UPDATED</b>: blogposts containing material/things I try to update as much as possible</li>
-            </ul>
+              </ul>
+            </p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-center">
             <Row className="button-row">
             <Col md={3} className="d-grid gap-2">
