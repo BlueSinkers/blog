@@ -1,0 +1,28 @@
+---
+title: "Vehicle Detector"
+dateMade: "09-09-2024"
+dateEdited: "09-09-2024"
+slug: "vehicle-detection"
+syn: "PROJECT: this is a blog write-up of vehicle-detector."
+tags: ["project"]
+image: "https://th.bing.com/th/id/OIP.LCT7UxQuweDiloX1FW3N9gHaE7?rs=1&pid=ImgDetMain"
+---
+# Project Description
+
+This project is intended as practice and proof-of-concept for the use of deep-learning-based image-classifiers at using training data to better classify new objects. This particular project is aimed at detecting vehicles from the following classes: bus, car, motorbike, threewheel, truck, and van. It takes from the dataset which you can find here. More specific and technical information along with statistics regarding the model can be found in the [Github repository here](https://github.com/BlueSinkers/Vehicle-Type). 
+
+# Project Utilization
+
+Using this project is very easy since I developed commands and files that make running the deep-learning model straightforward. These models are thoroughly documented on Github where further information can easily be found.
+
+# Discussion
+
+As you can see in the repository, I run some of my own tests on various images (images that I hand-selected). Some of these images were designed to confuse the model. I’ll quickly explain some of the flaws of the model by taking those examples and simplifying them – read the repo to get a more detailed version of this explanation.
+
+- Multiple vehicles in the image caused lots of challenges particularly because it wouldn’t default to picking the biggest or most notable vehicle and would instead pick the one with the highest confidence-rating – this was despite my attempts to change this. In some of the photos, there was a very tiny motorcycle in front of a large truck, but the classifier would classify the vehicle as a motorcycle because it was slightly (about 1% or so) more confident the bike was a bike than it was the truck was a truck.  
+- There were lots of issues with the data.   
+  - The “buses” section had no data which included school-buses, so when I tested it, it returned truck. This is likely because, upon visual inspection, the vast majority of trucks had a hood that extended out of the car while the bus looked a lot more like a box with such a hood. School-buses are a unique exception to that rule regarding buses and that must’ve confused the model.  
+  - The three-wheel section didn’t include three-wheels that weren’t autos or tuktuks so three-wheel vehicles like the Polaris Slingshot were often misclassified as cars likely due to their physical appearance.  
+  - The car section didn’t include race-cars or any non-traditional cars. Lots of these cars were also misclassified by my model.
+
+Fortunately, most of these errors were not only expected, but are very easy to solve. In future iterations, I will be more careful to solve them appropriately.

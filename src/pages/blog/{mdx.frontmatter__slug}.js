@@ -14,6 +14,7 @@ const BlogPage = ({ data, children }) => {
         description={children}
         datew={data.mdx.frontmatter.dateMade}
         datee={data.mdx.frontmatter.dateEdited}
+        tags={data.mdx.frontmatter.tags}
       /> 
     </Layout>
   )

@@ -6,6 +6,7 @@ import ProjectBanner from '../components/projectsbanner'
 import BlogCard from '../components/blogcard'
 import TechBanner from '../components/techbanner'
 import ThoughtsBanner from '../components/thoughtsbanner'
+import SportsBanner from '../components/sportsbanner'
 import profileImage from '../images/profile.jpg' // Correct relative path
 import './blogstyles.css'
 
@@ -20,6 +21,7 @@ const TagTemplate = ({ data, pageContext }) => {
       {tag === 'project' && <ProjectBanner />}
       {tag === 'tech' && <TechBanner />}
       {tag === 'thoughts' && <ThoughtsBanner />}
+      {tag === 'sports' && <SportsBanner />}
 
       {posts.length === 0 ? (
         <p>No posts found for this tag.</p>

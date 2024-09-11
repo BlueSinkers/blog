@@ -110,6 +110,7 @@ a:hover {
   padding: 0 20px; /* Adjust padding to ensure text doesn't touch the edges */
 }
 
+
 /** Responsive Layout for Small Screens */
 @media (max-width: 1024px) {
   .hero {
@@ -132,6 +133,7 @@ a:hover {
   margin: 0 auto;
   max-width: 850px; /* Increased max-width to make the text area wider */
   padding: 0 24px; /* Adjust padding if needed */
+  font-size: 18px; /*for everything else*/
 }
 
 .section__text {
@@ -141,7 +143,11 @@ a:hover {
 }
 
 .section__text p {
-  margin-bottom: 24px; /* Adjust margin between paragraphs if needed */
+  margin-bottom: 15px; /* Adjust margin between paragraphs if needed */
+}
+
+.information {
+  font-size: 15px !important;
 }
 
 /** Animation */

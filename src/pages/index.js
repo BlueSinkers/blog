@@ -11,7 +11,7 @@ import profileImage from '../images/profile.jpg'; // Correct relative path
 const BlogPage = ({ data }) => {
   return (
     <Layout>
-      <div  id="home">
+      <div className="main" id="home">
       <HeroSection />
       
       <div className="container" id="blogcards-main">

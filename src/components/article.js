@@ -1,7 +1,7 @@
 import React from 'react';
 import './articles.css';
 
-const Articles = ({ title, image, description, datew, datee }) => {
+const Articles = ({ title, image, description, datew, datee, tags }) => {
   return (
     <>
       <div className="container1">
@@ -23,8 +23,11 @@ const Articles = ({ title, image, description, datew, datee }) => {
       </div>
       <div className="section">
         {description}
-        <p>Written: {datew}</p>
-        <p>Edited: {datee}</p>
+        <hr/>
+        <p className="information">
+          Author: Abhiram Kidambi <br/>
+          Written: {datew} <br/>
+        Tags: {tags.map(tag => tag.toUpperCase()).join(", ")}</p>
       </div>
     </>
   );

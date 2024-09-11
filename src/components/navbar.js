@@ -1,55 +1,82 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'gatsby';
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarToggler, Collapse } from 'reactstrap';
-import './layout.modules.css'; // Import global CSS file
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarToggler, Collapse, UncontrolledDropdown, DropdownMenu, DropdownItem } from 'reactstrap';
+import { UserContext } from '../contexts/UserProvider';
+import Login from './Login';
+import Logout from './Logout';
+import './layout.modules.css';
 
 const NavbarComp = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const { user } = useContext(UserContext);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar className="navbar-custom sticky-top" color="light" light expand="lg" >
+    <Navbar className="navbar-custom sticky-top" color="light" light expand="lg">
       <NavbarBrand className="navbar-brand-custom" href="#">Abhi's Blog</NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="mx-auto" navbar>
-          <NavItem>
-            <NavLink tag={Link} className="nav-link-custom" to="/">← Main Site</NavLink>
-          </NavItem>
+          
           <NavItem>
             <NavLink tag={Link} className="nav-link-custom" to="/#home">Home</NavLink>
           </NavItem>
-          <NavItem>
-            <NavLink tag={Link} className="nav-link-custom" to="/#tags">Tags</NavLink>
-          </NavItem>
+
+          {/* Tags Dropdown */}
+          <UncontrolledDropdown nav inNavbar className="dropdown">
+            <NavLink tag={Link} className="nav-link-custom dropdown-toggle" to="/#tags">
+              Tags
+            </NavLink>
+            <DropdownMenu right>
+              <DropdownItem tag={Link} to="/tags/project">Projects</DropdownItem>
+              <DropdownItem tag={Link} to="/tags/tech">Tech</DropdownItem>
+              <DropdownItem tag={Link} to="/tags/thoughts">Thoughts</DropdownItem>
+              <DropdownItem tag={Link} to="/tags/sports">Sports</DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+
           <NavItem>
             <NavLink tag={Link} className="nav-link-custom" to="/#blogcards-main">Catalog</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} className="nav-link-custom" to="/">Search</NavLink>
+            <a href="https://www.abhiramkidambi.com" className="nav-link-custom" rel="noopener noreferrer">
+              ← Main Site
+            </a>
+          </NavItem>
+          <NavItem>
+          <a href="https://www.abhiramkidambi.com/#contact" className="nav-link-custom" rel="noopener noreferrer">
+              Contact
+            </a>
           </NavItem>
         </Nav>
-        <div className="social-icons">
-          <a href="https://www.linkedin.com/in/abhiramkidambi/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin" style={{ fontSize: '25px' }}></i>
-          </a>
-          <a href="https://github.com/bluesinkers" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-github" style={{ fontSize: '25px' }}></i>
-          </a>
-          <a href="mailto:akidamb1@terpmail.umd.edu?subject=Contacting%20you%20from%20Website" target="_blank" rel="noopener noreferrer">
-            <i className="fas fa-envelope" style={{ fontSize: '25px' }}></i>
-          </a>
-          <a href="https://www.instagram.com/bluesyncers/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram" style={{ fontSize: '25px' }}></i>
-          </a>
-          <a href="https://www.quora.com/profile/Abhiram-Kidambi-1" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-quora" style={{ fontSize: '25px' }}></i>
-          </a>
-          <a href="https://www.tiktok.com/@tutorking99" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-tiktok" style={{ fontSize: '25px' }}></i>
-          </a>
-        </div>
+
+        {/* User dropdown unchanged */}
+        <Nav className="ml-auto" navbar>
+          {user ? (
+            <UncontrolledDropdown nav inNavbar>
+              <NavLink className="nav-link-custom dropdown-toggle font-roboto">
+                {user.photoURL ? (
+                  <img
+                    src={user.photoURL}
+                    alt={user.displayName}
+                    className="user-profile-pic"
+                  />
+                ) : (
+                  <div className="user-profile-pic-placeholder"></div>
+                )}
+                {user.displayName}
+              </NavLink>
+              <DropdownMenu right>
+                <Logout />
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          ) : (
+            <NavItem>
+              <Login />
+            </NavItem>
+          )}
+        </Nav>
       </Collapse>
     </Navbar>
   );
