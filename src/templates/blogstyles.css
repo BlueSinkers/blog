@@ -1,0 +1,42 @@
+/* Container for the blog cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1200px; /* Adjusted width for better fit */
+    padding-top: 20px; /* Added padding-top for spacing */
+}
+
+/* Top row: no changes, keep the current layout */
+/* Following rows: 3 cards per row */
+.container > .card:nth-child(n+3) {
+    width: calc(33.33% - 20px); /* Three cards per row for all subsequent rows */
+}
+
+/* Media query for medium screens: 2 cards per row with reduced side margins */
+@media (max-width: 900px) {
+    .container {
+        width: 100% !important; /* Ensure the container takes full width */
+        padding: 0 10px !important; /* Add padding on the sides for spacing from the edges */
+    }
+    
+    .container > .card {
+        width: calc(50% - 10px) !important; /* Two cards per row with reduced side margins */
+        margin: 10px 0; /* Add vertical margin for spacing between rows */
+    }
+}
+
+/* Media query for smallest screens: Stack cards vertically */
+@media (max-width: 600px) {
+    .container {
+        display: block; /* Change display to block to stack cards vertically */
+        width: 100%; /* Ensure the container takes full width */
+        padding: 10px; /* Add padding around the container */
+    }
+    
+    .container > .card {
+        width: 100% !important; /* Each card takes the full width of the container */
+        margin: 10px 0; /* Add vertical margin for spacing between cards */
+    }
+}
+

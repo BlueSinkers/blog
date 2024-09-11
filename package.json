@@ -1,0 +1,35 @@
+{
+  "name": "blog-v1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "blog-v1",
+  "author": "Abhiram Kidambi",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "firebase": "^10.13.1",
+    "gatsby": "^5.13.7",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-mdx": "^5.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-remark": "^6.13.1",
+    "jquery": "^3.7.1",
+    "mdb-ui-kit": "^7.3.2",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.1",
+    "reactstrap": "^9.2.2"
+  }
+}

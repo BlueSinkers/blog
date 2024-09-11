@@ -1,0 +1,153 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap');
+
+/* Navbar styling */
+.navbar {
+    background-color: rgb(77, 10, 202);
+    padding: 4px 2rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-family: "Satisfy", cursive;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 15pt;
+    color: #000; 
+}
+
+.navbar-custom {
+    border-bottom: 1px solid #333;
+    min-height: 10vh;
+}
+
+/* Combine .nav-link and <a> tag styles */
+.navbar-nav .nav-link,
+.navbar-nav a {
+    color: #000;
+    margin-right: 2rem;
+    font-family: "Suse", sans-serif;
+    font-size: 13pt;
+    padding-top: 0; /* Custom top padding */
+    padding-bottom: 0; 
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav a:hover {
+    color: #ff69b4; /* Light pink color on hover */
+    font-weight: bold !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav a.active {
+    color: #ff69b4; /* Light pink color for active link */
+}
+
+/* Adjust styles for social icons */
+.social-icons a {
+    color: #000 !important;
+    margin-left: 0.75rem;
+    font-weight: normal !important;
+}
+
+.social-icons a:hover {
+    color: #ff69b4; /* Light pink color on hover */
+}
+
+.no-bold {
+    font-weight: normal !important;
+}
+
+.user-profile-pic {
+    width: 30px; /* Adjusted size */
+    height: 30px; /* Adjusted size */
+    border-radius: 50%;
+}
+
+.user-profile-pic-placeholder {
+    width: 30px; /* Adjusted size */
+    height: 30px; /* Adjusted size */
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+.logout-button {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.position-relative:hover .logout-button {
+    display: block;
+}
+
+/* Profile picture styling */
+.user-profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Dropdown styling */
+.navbar-nav .dropdown-menu {
+    display: none; /* Hide by default */
+    position: absolute; /* Ensure proper positioning */
+    top: 100%; /* Position below the parent */
+    left: 0;
+    background-color: #f8f9fa; /* Background for the dropdown */
+    border: 1px solid #ddd;
+    padding: 10px;
+    z-index: 1000;
+    min-width: 160px; /* Adjust width as needed */
+}
+
+.navbar-nav .dropdown-menu button {
+    width: 100%;
+    border: none;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.navbar-nav .dropdown-menu button:hover {
+    background-color: #e2e6ea; /* Hover effect */
+    cursor: pointer;
+}
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+}
+
+
+
+/* Remove the caret (triangle) for Tags dropdown */
+.navbar-nav .dropdown.tags-dropdown .dropdown-toggle::after {
+    display: none; /* Remove caret */
+}
+
+/* Restore original behavior for user profile dropdown */
+.navbar-nav .dropdown.user-dropdown:hover .dropdown-menu {
+    display: block; /* Show on hover */
+}
+
+.font-roboto {
+  font-family: "Suse", sans-serif !important;
+  margin-right: 0 !important;
+  font-weight: normal !important;
+}
+
+.ml-auto {
+  margin-left: auto; /* Push content to the right */
+  margin-right: 0; /* Ensure no extra margin on the right */
+  display: flex;
+  align-items: center;
+}

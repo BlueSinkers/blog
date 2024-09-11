@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Atomic+Age&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Moderustic:wght@300..800&display=swap');
+
+.anton {
+    font-family: "Anton", sans-serif;
+    font-size: 5rem !important;
+    color: rgba(238, 238, 238, 1);
+}
+
+.noto {
+    font-family: "Noto Sans Display", sans-serif;
+    font-size: 1.5rem;
+}
+
+.lead {
+    color: rgba(238, 238, 238, 1) !important; 
+    font-size: 1.2rem !important;
+}
+
+.bg-image {
+    background-image: url('https://www.cendyn.com/wp-content/uploads/2018/09/AdobeStock_116106668.jpeg') !important;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 90vh;
+    position: relative;
+}
+
+@media (max-width: 764px) {
+    .bg-image {
+        background-image: url('https://www.cendyn.com/wp-content/uploads/2018/09/AdobeStock_116106668.jpeg') !important;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+        position: relative;
+    }
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #ccc !important;
+    margin: 20px 0;
+}
+
+#tags {
+    scroll-margin-top: 10vh; /* Offset the scroll position by 10% of the viewport height */
+}
+
+.mask {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 800;
+    font-size: 5rem;
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+    padding: 0 15px;
+}
+
+.split-layout {
+    display: flex;
+    min-height: 90vh;
+    margin: 0;
+    padding: 0;
+}
+
+.split-layout .text-section {
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.image-section {
+    flex: 0 0 40%; /* Occupies 40% of the screen width */
+    background-image: url('../images/realshit.jpg'); /* Image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh; /* Adjust height as needed */
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.text-section h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 2.5rem; /* Increased font size */ 
+}
+
+.text-section p {
+    margin-top: 10px !important;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    color: rgb(228, 210, 210);
+}
+
+.text-section ul {
+    list-style-type: disc;
+    padding-left: 40px; /* Increased left padding for bullet points */
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.text-section ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.text-section .btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.text-section .btn {
+    flex: 1 1 25%; /* Adjusted to ensure four buttons per row */
+    font-size: 0.875rem;
+    padding: 10px;
+    margin: 5px; /* Added margin for spacing between buttons */
+    text-align: center;
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+@media (max-width: 768px) {
+    .split-layout {
+        flex-direction: column;
+    }
+
+    .split-layout .text-section {
+        flex: 0 0 100%;
+        padding: 20px;
+    }
+
+    .split-layout .image-section {
+        display: none;
+    }
+
+    /* Stacking the buttons in two per row when image is hidden */
+    .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px; /* Adjusted gap between buttons */
+    }
+
+    .button-row .btn {
+        flex: 1 1 48%; /* Stack buttons two per row on smaller screens */
+    }
+}
+/* Adjusted Button Styling */
+.button-row .btn {
+    background-color: #5cb8d6; /* Light blue background */
+    color: rgb(15, 1, 1); /* White text color */
+    border: none; /* Remove border */
+    font-weight: 800; /* Maintain consistent font weight */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    flex: 1 1 23%; /* Flexbox to ensure four buttons per row */
+    margin: 5px; /* Reduced margin for spacing between buttons */
+    text-align: center; /* Center text inside button */
+}
+
+/* Hover effect */
+.button-row .btn:hover {
+    background-color: #00008b; /* Dark blue background on hover */
+    color: white; /* Keep white text on hover */
+}
+
+/* Ensure buttons stay in one row */
+.button-row {
+    display: flex; /* Flexbox layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 10px; /* Reduced gap between buttons */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .button-row .btn {
+      flex: 1 1 48%; /* Stack buttons two per row on smaller screens */
+    }
+    .button-row {
+        flex-wrap: wrap; /* Allow wrapping on small screens */
+    }
+}
