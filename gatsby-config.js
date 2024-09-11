@@ -4,8 +4,9 @@
 module.exports = {
   siteMetadata: {
     title: `Blog V1`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://abhiramkidambi.com/blog`,  // Updated to reflect the subdirectory
   },
+  pathPrefix: `/blog`,  // Added to support deployment to a subdirectory
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
