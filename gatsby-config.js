@@ -2,6 +2,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: `/blog`,
   siteMetadata: {
     title: `Blog V1`,
     siteUrl: `https://abhiramkidambi.com/blog`,  // Updated to reflect the subdirectory
