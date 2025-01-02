@@ -40,15 +40,35 @@ const NavbarComp = () => {
             <NavLink tag={Link} className="nav-link-custom" to="/#blogcards-main">Catalog</NavLink>
           </NavItem>
           <NavItem>
-            <a href="https://www.abhiramkidambi.com" className="nav-link-custom" rel="noopener noreferrer">
-              ← Main Site
-            </a>
+          <a
+            href="https://www.abhiramkidambi.com"
+            className="nav-link-custom"
+            rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default action (navigating)
+              alert('You will be redirected from my blog site and to my main site.');
+              window.location.href = "https://www.abhiramkidambi.com"; // Proceed with the navigation after the alert
+            }}
+          >
+            ← Main Site
+          </a>
           </NavItem>
+
+
           <NavItem>
-          <a href="https://www.abhiramkidambi.com/#contact" className="nav-link-custom" rel="noopener noreferrer">
-              Contact
-            </a>
-          </NavItem>
+  <a 
+    href="https://www.abhiramkidambi.com/#contact" 
+    className="nav-link-custom" 
+    rel="noopener noreferrer"
+    onClick={(e) => {
+      e.preventDefault(); // Prevents the default link behavior
+      alert("You will be redirected away from my blog site and to my main site.");
+      window.location.href = "https://www.abhiramkidambi.com/#contact"; // Redirects after the alert
+    }}
+  >
+    Contact
+  </a>
+</NavItem>
         </Nav>
 
         {/* User dropdown unchanged */}
