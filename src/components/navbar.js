@@ -56,15 +56,20 @@ const NavbarComp = () => {
           {user ? (
             <UncontrolledDropdown nav inNavbar>
               <NavLink className="nav-link-custom dropdown-toggle font-roboto">
-                {user.photoURL ? (
-                  <img
-                    src={user.photoURL}
-                    alt={user.displayName}
-                    className="user-profile-pic"
-                  />
-                ) : (
-                  <div className="user-profile-pic-placeholder"></div>
-                )}
+              {user?.photoURL ? (
+  <img
+    src={user.photoURL}
+    alt={user.displayName || "User Profile"}
+    className="user-profile-pic"
+    onError={(e) => {
+      e.target.onerror = null; 
+      e.target.src = "/default-profile.png"; // Fallback image
+    }}
+  />
+) : (
+  <div className="user-profile-pic-placeholder"></div>
+)}
+
                 {user.displayName}
               </NavLink>
               <DropdownMenu right>

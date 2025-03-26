@@ -22,7 +22,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         // Configure any specific options if needed
-      },
+      }
     },
     "gatsby-plugin-mdx",
   ],
